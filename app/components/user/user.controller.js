@@ -16,11 +16,9 @@
         if (!vm.isMe) {
             getUserInfo();
             getImages(vm.userId);
-            getEvents(vm.userId);
         } else {
             getMyUserInfo();
             getImages($localStorage.userInfo._id);
-            getMyEvents();
         };
 
         checkMyFollows();
@@ -61,27 +59,6 @@
                 $state.go('signin');
             });
         };
-
-        function getEvents(userId) {
-            UserService.loadEventsByUserId(userId)
-                .then(function (res) {
-                    vm.events = res;
-                }, function (err) {
-                    $rootScope.alert = err.data.message;
-                    $state.go('index.events');
-                });
-        };
-
-        function getMyEvents() {
-            EventService.loadMyEvents()
-                .then(function (res) {
-                    vm.events = res;
-                }, function (err) {
-                    $rootScope.alert = err.data.message;
-                    $state.go('index.events');
-                });
-        };
-
         function doFollow() {
             if (!vm.isFollow) {
                 FollowService.follow(vm.userId).then(function (res) {
