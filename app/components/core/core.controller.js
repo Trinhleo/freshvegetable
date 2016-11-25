@@ -6,7 +6,7 @@
         var vm = this;
         $rootScope.userInfo = $localStorage.userInfo;
         $rootScope.isAdmin = $localStorage.userInfo && $localStorage.userInfo.roles[0] === 'admin' ? true : false;
-        var socket = io.connect('http://localhost:3000/notification');
+        var socket = io.connect('https://freshvegetableserver.herokuapp.com/notification');
         vm.isActive = function (viewLocation) {
             return viewLocation === $location.path();
         };
