@@ -11,7 +11,6 @@
             'ngStorage',
             'ngFileUpload',
             'angularFileUpload',
-            'ui.bootstrap.datetimepicker',
             'geolocation',
             'md.data.table',
             'app.config',
