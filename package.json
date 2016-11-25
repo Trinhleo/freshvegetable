@@ -4,8 +4,8 @@
   "description": "",
   "main": "gulpfile.js",
   "engines": {
-    "node": ">=0.10.28",
-    "npm": ">=1.4.28"
+    "node": ">=6.9.1",
+    "npm": ">=3.10.8"
   },
   "scripts": {
     "start": "gulp",
