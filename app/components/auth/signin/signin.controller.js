@@ -21,7 +21,6 @@
                 $localStorage.userInfo = res.userInfo;
                 $rootScope.userInfo = $localStorage.userInfo;
                 $rootScope.isAdmin = $localStorage.userInfo.roles[0] === 'admin' ? true : false;
-                console.log($state.previous.state);
                 $state.go(!$state.previous.state.abstract ? $state.previous.state : 'index.product')
                 // console.log(err)
                 // vm.alert = err.data.message || err.message;

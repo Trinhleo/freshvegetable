@@ -102,7 +102,6 @@
 
         function readNotification(id) {
             NotificationService.readNotification(id).then(function (res) {
-                console.log(res);
                 loadNewNotificatons();
             }, function (err) {
 
@@ -121,7 +120,6 @@
         });
 
         socket.on('notifications', function (data) {
-            console.log(data);
             $timeout(function () {
                 vm.notifications = data;
             });
