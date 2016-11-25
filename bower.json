@@ -5,14 +5,9 @@
   "moduleType": [],
   "license": "MIT",
   "homepage": "",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components"
-  ],
   "dependencies": {
     "jquery": "^2.2.0",
-    "angular": "~1.4.8",
+    "angular": "1.5.8",
     "ngstorage": "^0.3.11",
     "angular-bootstrap": "angular-bootstrap-forked#0.14.0",
     "angular-ui-router": "~0.2.15",
