@@ -2,9 +2,9 @@
     angular.module('app.user')
         .controller('UserController', UserController);
 
-    UserController.$inject = ['$rootScope', 'UserService', 'FollowService', 'GalleryService', 'EventService', '$state', 'appConfigs', '$localStorage'];
+    UserController.$inject = ['$rootScope', 'UserService', 'FollowService', 'GalleryService', '$state', 'appConfigs', '$localStorage'];
 
-    function UserController($rootScope, UserService, FollowService, GalleryService, EventService, $state, appConfigs, $localStorage) {
+    function UserController($rootScope, UserService, FollowService, GalleryService, $state, appConfigs, $localStorage) {
         var vm = this;
         vm.userInfo = "";
         vm.userId = $state.params.userId;
