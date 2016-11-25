@@ -8,8 +8,7 @@
     "npm": ">=3.10.8"
   },
   "scripts": {
-    "start": "gulp",
-    "postinstall": "bower install"
+    "start": "gulp"
   },
   "author": "",
   "license": "ISC",
