@@ -1,0 +1,65 @@
+<section>
+    <div class="action-bar">
+        <a ng-show="$root.userInfo" ui-sref="index.garden-add" class="fa-icon fa fa-plus-square" data-toggle="tooltip" title="Tạo vườn"></a>
+    </div>
+    <div class="row" style="padding-left: 5px; padding-right:5px; margin-top:5px">
+        <ul class="nav nav-tabs pull-right">
+            <li ng-class="{ active:vm.type === 0}" ng-show="$root.isAdmin"><a ng-click="vm.loadGardens(0)">Tất cả vườn</a>
+            </li>
+            <li ng-class="{ active:vm.type === 1}"> <a ng-click="vm.loadGardens(1)">Vườn đã cấp phép</a>
+            </li>
+            <li ng-class="{ active:vm.type === 2}" ng-show="$root.userInfo"><a ng-click="vm.loadGardens(2)">Vườn của tôi</a>
+            </li>
+            <!--<li ng-class="{ active:vm.type === 3}" ng-show="$root.userInfo"><a ng-click="vm.getEventsLocation(2)">Vườn rau yêu thích</a>
+            </li>-->
+            <!--<li ng-class="{ active: vm.isActive('/events/add')}"><a ui-sref="index.add">Add new event</a></li>-->
+        </ul>
+    </div>
+    <div class="parallax-garden col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+        <md-tabs md-dynamic-height md-border-bottom style="border-top: 3px solid lightgrey">
+            <md-tab label="Danh sách vườn rau">
+                <!--<md-input-container>
+                    <input class="form-control col-md-4" type="text" ng-model="vm.search" placeholder="Tìm kiếm" ng-change="vm.figureOutItemsToDisplay()"
+                    />
+                </md-input-container>-->
+                <md-divider style="margin-bottom:30px;"></md-divider>
+                <!--<div class="alert alert-warning text-center" data-ng-if="vm.gardens&&vm.gardens.length===0">
+                    Chưa có vườn, hãy <a data-ui-sref="index.garden-add">tạo một vườn</a>
+                </div>-->
+                <div class="list-group row parralax" >
+                    <md-card class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="cursor: pointer; margin-left:6% ; margin-bottom: 6%" data-ng-repeat="garden in vm.gardens" data-ui-sref="index.garden-details ({ gardenId: garden._id }) "
+                        class="list-group-item">
+                        <div class="alert alert-danger" ng-show="!garden.approved">
+                            <strong>Chưa được duyệt!</strong>
+                        </div>
+                        <div class="alert alert-success" ng-show="garden.approved">
+                            <strong>Đã được duyệt</strong>
+                        </div>
+                        <small class="list-group-item-text">
+    Đã tạo lúc
+    <span data-ng-bind="garden.created | date:'short'"></span>
+    chủ vườn:
+    <span data-ng-if="garden.user" data-ng-bind="garden.user.displayName"></span>
+    <span data-ng-if="!garden.user">Người dùng đã bị xóa</span>
+  </small>
+                        <h4 class="list-group-item-heading" data-ng-bind="garden.name"></h4>
+                        <div class="img_container"><img alt="" class="img-responsive text-center" ng-src="{{garden.imgUrlFull}}" /></div>
+                    </md-card>
+                </div>
+                <!--<pagination boundary-links="true" max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength" ng-model="vm.currentPage"
+                ng-change="vm.pageChanged()">
+            </pagination>-->
+            </md-tab>
+            <md-tab label="Vị trí bản đồ" ng-click="vm.setMapSize();">
+                <!--<md-input-container>
+                    <input class="form-control col-md-4" type="text" ng-model="vm.search2" placeholder="Tìm kiếm" ng-change="vm.figureOutItemsToDisplay2()"
+                    />
+                </md-input-container>-->
+                <!--<md-divider style="margin-bottom:30px;"></md-divider>-->
+
+                <my-map id="map_canvas" gardens="vm.gardens" my-id="vm.myId" ng-if="vm.gardens"></my-map>
+            </md-tab>
+        </md-tabs>
+        <div class="full-page parralax"></div>
+    </div>
+</section>
