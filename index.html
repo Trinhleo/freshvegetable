@@ -9,27 +9,21 @@
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
 	<link rel="stylesheet" href="app/components/core/core.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.min.css">
-	<!--<link rel="stylesheet" href="node_modules/angular-bootstrap-datetimepicker/src/css/datetimepicker.css" />-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-toastr/2.1.1/angular-toastr.min.css">
 	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material-data-table/0.10.9/md-data-table.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
-	<!--directives-->
 	<link rel="stylesheet" href="app/shared/directives/map/map.directive.css" />
-	<!--<link rel="stylesheet" href="app/shared/directives/chat/chat.directive.css" />
-	<link rel="stylesheet" href="app/shared/directives/slider/slider.directive.css" />-->
-
 </head>
 
 <body>
-	<div ui-view>
+	<div ui-view></div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
-	crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.2.0/ui-bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
@@ -45,10 +39,10 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-data-table/0.10.9/md-data-table.min.js"> </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"> </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"> </script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"> </script>
 <script src="app/app.module.js"></script>
 <script src="app/app.config.js"></script>
-<script src="app/app.router.js"></script> 
+<script src="app/app.router.js"></script>
 <script src="app/shared/services/services.module.js"></script>
 <script src="app/shared/services/auth.service.js"></script>
 <script src="app/shared/services/user.service.js"></script>
@@ -60,13 +54,13 @@
 <script src="app/shared/services/production-item.service.js"></script>
 <script src="app/shared/services/device-node.service.js"></script>
 <script src="app/shared/services/season.service.js"></script>
-<script src="app/shared/services/task.service.js"></script> //
+<script src="app/shared/services/task.service.js"></script>
 <script src="app/components/core/core.module.js"></script>
 <script src="app/components/core/core.router.js"></script>
-<script src="app/components/core/core.controller.js"></script> //
+<script src="app/components/core/core.controller.js"></script>
 <script src="app/components/dashboard/dashboard.module.js"></script>
 <script src="app/components/dashboard/dashboard.router.js"></script>
-<script src="app/components/dashboard/dashboard.controller.js"></script> //
+<script src="app/components/dashboard/dashboard.controller.js"></script>
 <script src="app/components/auth/signup/signup.module.js"></script>
 <script src="app/components/auth/signup/signup.router.js"></script>
 <script src="app/components/auth/signup/signup.controller.js"></script>
@@ -75,7 +69,7 @@
 <script src="app/components/auth/signin/signin.controller.js"></script>
 <script src="app/components/auth/signout/signout.module.js"></script>
 <script src="app/components/auth/signout/signout.router.js"></script>
-<script src="app/components/auth/signout/signout.controller.js"></script> //
+<script src="app/components/auth/signout/signout.controller.js"></script>
 <script src="app/components/user/user.module.js"></script>
 <script src="app/components/user/user.router.js"></script>
 <script src="app/components/user/user.controller.js"></script>
@@ -86,23 +80,15 @@
 <script src="app/components/gallery/gallery.module.js"></script>
 <script src="app/components/gallery/gallery.router.js"></script>
 <script src="app/components/gallery/gallery.controller.js"></script>
-<script src="app/components/gallery/upload-image.controller.js"></script> // <script src="app/components/chat/chat.module.js"></script>
-<!--// <script src="app/components/chat/chat.router.js"></script>-->
-<!--// <script src="app/components/chat/chat.controller.js"></script>-->
-
-<!--directives-->
+<script src="app/components/gallery/upload-image.controller.js"></script>
 <script src="app/shared/directives/map/map.directive.js"></script>
 <script src="app/shared/directives/upload/upload.directive.js"></script>
-<!--<script src="app/shared/directives/chat/chat.directive.js"></script>
-<script src="app/shared/directives/slider/slider.directive.js"></script>-->
-<!--events
 <script src="app/components/events/events.module.js"></script>
 <script src="app/components/events/events.router.js"></script>
 <script src="app/components/events/events.controller.js"></script>
 <script src="app/components/events/event-details.controller.js"></script>
 <script src="app/components/events/manage/add-event.controller.js"></script>
-<script src="app/components/events/manage/edit-event.controller.js"></script>-->
-<!--garden-->
+<script src="app/components/events/manage/edit-event.controller.js"></script>
 <script src="app/components/garden/garden.module.js"></script>
 <script src="app/components/garden/garden.router.js"></script>
 <script src="app/components/garden/garden.controller.js"></script>
@@ -110,8 +96,6 @@
 <script src="app/components/garden/garden-edit.controller.js"></script>
 <script src="app/components/garden/garden-details.controller.js"></script>
 <script src="app/components/garden/approve-garden.controller.js"></script>
-
-<!--season-->
 <script src="app/components/season/season.module.js"></script>
 <script src="app/components/season/season.router.js"></script>
 <script src="app/components/season/season.controller.js"></script>
@@ -120,21 +104,16 @@
 <script src="app/components/season/season-details.controller.js"></script>
 <script src="app/components/season/season-list.controller.js"></script>
 <script src="app/components/season/season-task.controller.js"></script>
-<!--product-->
 <script src="app/components/product/product.module.js"></script>
 <script src="app/components/product/product.router.js"></script>
 <script src="app/components/product/product.controller.js"></script>
 <script src="app/components/product/product-details.controller.js"></script>
-
-
-<!--production item-->
 <script src="app/components/production-item/production-item.module.js"></script>
 <script src="app/components/production-item/production-item.router.js"></script>
 <script src="app/components/production-item/production-item.controller.js"></script>
 <script src="app/components/production-item/production-item-add.controller.js"></script>
 <script src="app/components/production-item/production-item-edit.controller.js"></script>
 <script src="app/components/production-item/production-item-details.controller.js"></script>
-<!--device-node-->
 <script src="app/components/device-node/device-node.module.js"></script>
 <script src="app/components/device-node/device-node.router.js"></script>
 <script src="app/components/device-node/device-node.controller.js"></script>
